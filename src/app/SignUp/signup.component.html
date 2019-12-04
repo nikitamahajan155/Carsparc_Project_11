@@ -1,0 +1,97 @@
+<div class="jumbotron image">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <form [formGroup]="SC">
+                    <div class="card image">
+                        <h1 style="text-align: center;"><b>Sign-Up</b></h1>
+                        <h5 style="text-align: center; margin-bottom: 25px; color: wheat;"><b>(Service Center)</b></h5>
+                        <div class="input_field">
+                            <div class="form-group">
+                                <div class="simple-form">
+                                    <input type="text" placeholder="Firm Name" class="form-control"
+                                        formControlName="FirmName">
+                                    <div class="validations"
+                                        *ngIf="SC.get('FirmName').hasError('required') && SC.get('FirmName').touched">
+                                        This fiels is required</div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Owner Name" class="form-control"
+                                    formControlName="OwnerName">
+                                <div class="validations"
+                                    *ngIf="SC.get('OwnerName').hasError('required') && SC.get('OwnerName').touched">This
+                                    field is required.</div>
+                            </div>
+                            <div class="form-group">
+                                    <input type="Contact" placeholder="Contact Number" class="form-control" formControlName="Contact">
+                                    <div class="validations" *ngIf="SC.controls['Contact'].hasError('required') 
+                                && (SC.controls['Contact'].touched || SC.controls['Contact'].dirty)">
+                                        This field is required
+                                    </div>
+                                    <div class="validations" *ngIf="SC.controls['Contact'].hasError('pattern')">
+                                     Invalid Contact Number.
+                                    </div>
+                                </div>
+                            <div class="form-group">
+                                <input type="Email" placeholder="Email" class="form-control" formControlName="Email">
+                                <div class="validations" *ngIf="SC.controls['Email'].hasError('required') 
+                            && (SC.controls['Email'].touched || SC.controls['Email'].dirty)">
+                                    This field is required
+                                </div>
+                                <div class="validations" *ngIf="SC.controls['Email'].hasError('pattern')">
+                                 Email format is incorrect.
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" placeholder="Password" class="form-control"
+                                    formControlName="Password">
+                                <div class="validations" *ngIf="SC.controls['Password'].hasError('required') 
+                            && (SC.controls['Password'].touched || SC.controls['Password'].dirty)">
+                                    This field is required
+                                </div>
+                                <div class="validations" *ngIf="SC.controls['Password'].hasError('pattern')">
+                                    Password should be in between 8 to 15 characters.
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" formControlName="ConfirmPassword"
+                                    compare="Password" placeholder="Confirm Password">
+                                <div class="validations" *ngIf="SC.controls['ConfirmPassword'].hasError('required') 
+                                && (SC.controls['ConfirmPassword'].touched || SC.controls['ConfirmPassword'].dirty)">
+                                    This field is required.
+                                </div>
+                                <div class="validations" *ngIf="SC.controls['ConfirmPassword'].hasError('compare')">
+                                    Confirm Password do not match</div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Pincode" class="form-control" formControlName="Pincode">
+                                <div class="validations" *ngIf="SC.controls['Pincode'].hasError('required') 
+                                    && (SC.controls['Pincode'].touched || SC.controls['Pincode'].dirty)">
+                                    This field is required
+                                </div>
+                                <div class="validations" *ngIf="SC.controls['Pincode'].hasError('pattern')">
+                                    Please enter a valid Pincode.</div>
+                            </div>
+                            <div class="form-group">
+                                <textarea rows="4" cols="50" class="form-control" placeholder="Address"
+                                    formControlName="Address"></textarea>
+                                <div class="validations"
+                                    *ngIf="SC.get('Address').hasError('required') && SC.get('Address').touched">This
+                                    field is required.</div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="nav-item nav-link-edit btn btn-info btn-block"
+                                    value="submit" [disabled]="!SC.valid" (click)="SignupUser(SC.value)" [routerLink]="['/otp']">Generate
+                                    OTP</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+    </div>
+</div>

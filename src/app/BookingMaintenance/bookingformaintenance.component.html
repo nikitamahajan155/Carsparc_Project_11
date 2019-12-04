@@ -1,0 +1,81 @@
+<div class="jumbotron image">
+<div class="container">
+  <!-- <form> -->
+    <div class="row">
+     <div class="col-sm-2"></div>
+      <div class="col-sm-8">
+         
+        <div class="card image">
+        <nav class="navbar navbar-expand-lg bg-primary navbar-dark justify-content-center">
+          <h4>Booking For Maintenance/Wash </h4>
+        </nav>
+
+        <div style="margin-bottom:2px"></div>
+        <h6 style="text-align:center"><p style="color:red">Confirm Order within 15 min</p></h6> 
+        <h6 style="text-align:center" style="color: white; text-align: center;">00:00</h6>  
+        <div style="margin-bottom:2px"></div>
+
+              <div style="margin-bottom:10px"></div>
+                      
+                 <div class="row">
+                  <div class="col-sm-3"></div>
+                    <div class="col-sm-6">
+                      <table class="table table-stripped" style="color: white;">
+                            <thead>
+                              <tr>
+                                <th>Contact Name</th>
+                                  <td>{{bookingMaintInfo.ContactName}}</td>
+                              </tr>
+                              <tr>
+                                <th>Vehicle Details</th>
+                                <td>{{bookingMaintInfo.VehicleDetails}}</td>
+                              </tr>
+                              <tr>
+                                <th>Contact Details</th>
+                                <td>{{bookingMaintInfo.ContactDetails}}</td>
+                              </tr>
+                              <tr>
+                                <th>Service Type</th>
+                                <td>{{bookingMaintInfo.ServiceType}}</td>
+                              </tr>
+                              <tr>
+                                <th>Pick-up Location</th>
+                                <td>{{bookingMaintInfo.PickUpLocation}}</td>
+                              </tr>
+                              <tr>
+                                <th>Pick-up Date</th>
+                                <td>{{bookingMaintInfo.PickUpDate}}</td>
+                              </tr>
+                              <tr>
+                                <th>Budget</th>
+                                <td>{{bookingMaintInfo.Budget}}</td>
+                              </tr>
+                              <tr>
+                                <th>Service Description</th>
+                                <td>{{bookingMaintInfo.ServiceDescription}}</td>
+                              </tr>
+                            </thead>
+                        
+                          </table>
+                     </div>
+                    <div class="col-sm-3"></div>
+                  </div>
+
+                     <div style="margin-bottom:30px"></div>
+                      <div class="form-group justify-content-center"style="text-align:center;">
+                      <button type="submit" id="Corner" class="btn btn-primary" style="margin-right:50px" (click)="toaster()" [routerLink]="['home']">Confirm</button>
+                      <button id="Corner" type="button" class="btn btn-danger">Reject</button>
+                      </div>
+     
+   </div>
+                    </div>
+                     <div class="col-sm-2"></div>
+                    </div>
+              
+                  <!-- </form>         -->
+           </div>
+       
+          </div>
+
+
+

@@ -1,0 +1,74 @@
+<div class="jumbotron image">
+<div class="container">
+  <form [formGroup]="AL">
+    <div class="row">
+      <div class="col-md-6"></div>
+      <div class="col-md-6">
+        <!-- <div class="form-group">
+          <input type="number" class="form-control" placeholder="Serach by Id" formControlName="Id">
+          <button type="submit" class="btn btn-info" (click)="GetById()">Search</button>
+        </div> -->
+        <div class="input-group" style="margin-top: 30px; width: 400px; margin-left: 100px;">
+          <input type="number" class="form-control" placeholder="Serach by Id" formControlName="Id">
+          <span class="input-group-btn">
+            <button type="submit" class="btn btn-info" (click)="GetById()">Search</button>
+          </span>
+       </div>
+       
+          <table class="table table-striped" style="margin-top: 30px; color: wheat;">
+            <thead>
+              <tr *ngIf="InfoById">
+                <th>Id</th>
+                <th>FirmName</th>
+                <th>OwnerName</th>
+                <th>Contact</th>
+                <th>Email</th>
+                <th>Pincode</th>
+                <th>Address</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let i of InfoById">
+                <td>{{i.Id}}</td>
+                <td>{{i.FirmName}}</td>
+                <td>{{i.OwnerName}}</td>
+                <td>{{i.Contact}}</td>
+                <td>{{i.Email}}</td>
+                <td>{{i.Pincode}}</td>
+                <td>{{i.Address}}</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+    </div>
+    <div class="row">
+      <!-- <button type="submit" class="btn btn-info" (click)="GetAllInfo()" style="margin-left: 420px;">Get All Sign-Up Records</button> -->
+<h3 style="color: white;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; margin-left: 420px;"><b><u>All Registered users</u></b></h3>
+      <table class="table table-striped" style="margin-top: 30px; color: white;">
+        <thead>
+          <tr *ngIf="AllInfo">
+            <th>Id</th>
+            <th>FirmName</th>
+            <th>OwnerName</th>
+            <th>Contact</th>
+            <th>Email</th>
+            <th>Pincode</th>
+            <th>Address</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let s of AllInfo">
+            <td>{{s.Id}}</td>
+            <td>{{s.FirmName}}</td>
+            <td>{{s.OwnerName}}</td>
+            <td>{{s.Contact}}</td>
+            <td>{{s.Email}}</td>
+            <td>{{s.Pincode}}</td>
+            <td>{{s.Address}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </form>
+</div>
+</div>

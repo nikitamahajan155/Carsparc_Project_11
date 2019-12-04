@@ -1,0 +1,109 @@
+<body>
+    <!-- {{login|json}}
+    {{SLogin|json}} -->
+<div class="container">
+    <form>
+        <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="card">
+            <h1 style="text-align: center;"><b>Service Center Login</b></h1>
+            <div class="form-group">
+                <input type="text" placeholder="Mobile/Email" id="txtUser" class="form-control" style="margin-top: 30px;">
+            </div>
+            <div class="form-group">
+                <body>
+                    <form [formGroup]="Varlogin" (submit)="LoginCredentials(Varlogin.value)" novalidate>
+                    <div class="container-fluid">
+                        <div class="row">
+                            
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8"></div>
+                            <div class="col-md-4">
+                                
+                                    <div class="card">
+                                        <div class="img_logo" style="text-align: center;">
+                                            <img src="./assets/Images/large2.png" class="rounded-circle" width="150px" height="150px">
+                                        </div>
+                                        <div class="form-group">
+                                            <h1 style="text-align: center;"><b>Login</b></h1>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Mobile/Email" class="form-control" formControlName="Contact">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" placeholder="Password" class="form-control" formControlName="Password">
+                                        </div>
+                                        <div class="form-group">
+                                                <!-- <div class="custom-control custom-checkbox"> -->
+                                                        <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+                                                        <label class="custom-control-label" for="defaultUnchecked" style="margin-left: 60px;">Remember Me</label>
+                                                    <!-- </div> -->
+                                                <a href="/forgotpwd" style="margin-left: 40px;">Forgot Password?</a>
+                                           </div>
+                                        <div class="row">
+                                            <div class="col-md-3"></div>
+                                            <div class="col-md-6">
+                                                <div class="button_group" style="justify-content: center;">
+                                                    <button type="submit" class="btn btn-large btn-primary"
+                                                        style="margin-right: 25px;" (click)="LoginCredentials(Varlogin.value)">Login</button>
+                                                    <button type="reset" class="btn btn-large btn-danger">Reset</button>
+                                                </div>
+                                                <div class="col-md-3"></div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group" style="text-align: center; margin-top: 20px;">
+                                            <span
+                                                style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><b>Don't
+                                                    have an account? </b></span>
+                                            <span
+                                                style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                                                <a href="/button"> Sign-Up here</a></span>
+                                        </div>
+                                    </div>
+                           
+                            </div>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                </form>
+                </body>
+                
+                
+                
+                    <input type="text" placeholder="Password" id="txtPassword" class="form-control">
+            </div>
+           <div class="row">
+               <div class="col-md-2"></div>
+               <div class="col-md-8">
+                   <div class="form-group">
+                        <!-- <div class="custom-control custom-checkbox"> -->
+                                <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+                                <label class="custom-control-label" for="defaultUnchecked">Remember Me</label>
+                            <!-- </div> -->
+                        <a href="#" style="margin-left: 40px;">Forgot Password?</a>
+                   </div>
+               </div>
+               <div class="col-md-2"></div>
+           </div>
+            <div class="btn-group">
+                    <div class="form-group" style="text-align: center;">
+                        <button type="submit" id="btnLogin" class="btn btn-primary btn-large" style="margin-left: 70px;" [routerLink]="['/dashboard']" (click)="ServiceLogin(login.value)">Login</button>
+                        <button type="reset" class="bth btn-danger btn-large" style="margin-left: 50px;">Cancel</button>
+                    </div>
+                </div>
+        <div id="divError" class="alert alert-danger collapse">
+            <a id="linkClose" href="#" class="close">&times;</a>
+            <div id="divErrortext"></div>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+
+
+
+    </form>
+</div>
+</body>

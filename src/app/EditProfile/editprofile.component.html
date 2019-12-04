@@ -1,0 +1,76 @@
+<div class="jumbotron image">
+<div class="conatiner-fluid">
+    <form [formGroup]="EP" novalidate>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-5">
+                <div class="card image" style="margin-left: 100px;">
+                    <h1 style="text-align: center;"><b>Edit Profile</b></h1>
+                <div class="profile" style="margin-bottom: 20px;">
+                    <img src="./assets/download.png" class="rounded-circle" width="200" height="200" style="margin-top: 25px;" >
+                </div>
+                <div class="form-group">
+                    <div class="simple-form">
+                        <input type="text" placeholder="Firm Name" class="form-control"
+                            formControlName="FirmName">
+                        <div class="validations"
+                            *ngIf="EP.get('FirmName').hasError('required') && EP.get('FirmName').touched">
+                            This fiels is required</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Owner Name" class="form-control"
+                        formControlName="OwnerName">
+                    <div class="validations"
+                        *ngIf="EP.get('OwnerName').hasError('required') && EP.get('OwnerName').touched">This
+                        field is required.</div>
+                </div>
+                <div class="form-group">
+                    <input type="Contact" placeholder="Contact Number" class="form-control" formControlName="Contact">
+                    <div class="validations" *ngIf="EP.controls['Contact'].hasError('required') 
+                && (EP.controls['Contact'].touched || EP.controls['Contact'].dirty)">
+                        This field is required
+                    </div>
+                    <div class="validations" *ngIf="EP.controls['Contact'].hasError('pattern')">
+                     Invalid Contact Number.
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="Email" placeholder="Email" class="form-control" formControlName="Email">
+                    <div class="validations" *ngIf="EP.controls['Email'].hasError('required') 
+                && (EP.controls['Email'].touched || EP.controls['Email'].dirty)">
+                        This field is required
+                    </div>
+                    <div class="validations" *ngIf="EP.controls['Email'].hasError('pattern')">
+                     Email format is incorrect.
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Pincode" class="form-control" formControlName="Pincode">
+                    <div class="validations" *ngIf="EP.controls['Pincode'].hasError('required') 
+                        && (EP.controls['Pincode'].touched || EP.controls['Pincode'].dirty)">
+                        This field is required
+                    </div>
+                    <div class="validations" *ngIf="EP.controls['Pincode'].hasError('pattern')">
+                        Pincode should be 6 digits long.
+                       </div>
+                </div>
+                <div class="form-group">
+                    <textarea rows="4" cols="50" class="form-control" placeholder="Address"
+                        formControlName="Address"></textarea>
+                    <div class="validations"
+                        *ngIf="EP.get('Address').hasError('required') && EP.get('Address').touched">This
+                        field is required.</div>
+                </div>
+                <div class="form-group" style="text-align: center;">
+                        <button type="submit" class="btn btn-primary btn-lg" (click)="editprofile(EP.value)" [routerLink]="['/dashboard']" style="width: 200px; margin-right: 60px;">Update</button>
+                        <button type="reset" class="btn btn-danger btn-lg"  style="width: 200px;">Reset</button>
+                </div>
+               
+        </div>
+        </div>
+            <div class="col-md-3"></div>
+        </div>
+    </form>
+</div>
+</div>

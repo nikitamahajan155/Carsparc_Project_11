@@ -1,0 +1,52 @@
+input{
+    align-content: center;
+    border-radius: 15px;
+    padding: 25px; 
+    height: 40px; 
+    background-color: #f1f1f1;
+    margin-top: 35px;
+}
+.otp_page{
+    margin-left: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 19px;
+    margin-top: 25px;
+}
+a{
+    margin-bottom: 40px;
+}
+button{
+    height: 50px;
+    border-radius: 25px;
+    width: 150px; 
+     
+}
+.btn-group{
+margin-top: 40px;
+}
+.card{
+    margin-top: 75px;
+    margin: 5px;
+    padding: 20px;
+    border: 2px solid white;
+    -webkit-box-shadow: 10px 9px 23px 3px rgba(0,0,0,0.95);
+    -moz-box-shadow: 10px 9px 23px 3px rgba(0,0,0,0.95);
+    box-shadow: 10px 9px 23px 8px rgba(116, 114, 114, 0.95);
+    margin-top: 100px;
+    margin-bottom: 100px;
+    }
+body{
+    margin-top: 80px;
+   }
+h1{
+    background-color: rgb(18, 155, 247);
+    color: #f1f1f1;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 15px;
+}
+.image{
+    background-size: cover;
+    width: auto;
+    background-image: url('/assets/DSC100162898.jpg');
+    background-position: 100% 100%;
+    }

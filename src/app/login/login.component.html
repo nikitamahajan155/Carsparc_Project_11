@@ -1,0 +1,59 @@
+<div class="jumbotron image">
+    <form [formGroup]="Varlogin" (submit)="LoginCredentials(Varlogin.value)" novalidate>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4" style="margin-top: 80px;">
+                
+                    <div class="card image">
+                        <div class="img_logo" style="text-align: center;">
+                            <img src="./assets/large2.png" class="rounded-circle" width="150px" height="150px">
+                        </div>
+                        <div class="form-group">
+                            <h1 style="text-align: center; color: honeydew;"><b>Login</b></h1>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Mobile/Email" class="form-control" formControlName="Contact">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" placeholder="Password" class="form-control" formControlName="Password">
+                        </div>
+                        <div class="form-group">
+                                <!-- <div class="custom-control custom-checkbox"> -->
+                                        <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+                                        <label class="custom-control-label" for="defaultUnchecked" style="margin-left: 60px; color: honeydew;">Remember Me</label>
+                                    <!-- </div> -->
+                                <a href="/forgotpwd" style="margin-left: 40px;"><b>Forgot Password?</b></a>
+                           </div>
+                        <div class="row">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-6">
+                                <div class="button_group" style="justify-content: center;">
+                                    <button type="submit" class="btn btn-large btn-primary"
+                                        style="margin-right: 25px;" (click)="LoginCredentials(Varlogin.value)">Login</button>
+                                    <button type="reset" class="btn btn-large btn-danger">Reset</button>
+                                </div>
+                                <div class="col-md-3"></div>
+                            </div>
+                        </div>
+                        <div class="form-group" style="text-align: center; margin-top: 20px;">
+                            <span
+                                style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: wheat;"><b>Don't
+                                    have an account? </b></span>
+                            <span
+                                style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                                <a href="/button"> Sign-Up here</a></span>
+                        </div>
+                    </div>
+           
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+    <!-- </div> -->
+</form>
+</div>
+
+<!-- <router-outlet></router-outlet> -->
+
+

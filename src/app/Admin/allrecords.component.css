@@ -1,0 +1,15 @@
+.card{
+    margin-top: 75px;
+    margin: 5px;
+    padding: 20px;
+    border: 2px solid white;
+    -webkit-box-shadow: 10px 9px 23px 3px rgba(0,0,0,0.95);
+    -moz-box-shadow: 10px 9px 23px 3px rgba(0,0,0,0.95);
+    box-shadow: 10px 9px 23px 8px rgba(116, 114, 114, 0.95);
+    }
+    .image{
+        background-size: cover;
+        width: auto;
+        background-image: url('/assets/DSC100162898.jpg');
+        background-position: 100% 100%;
+    }

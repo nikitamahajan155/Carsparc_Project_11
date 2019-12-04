@@ -1,0 +1,32 @@
+.threeD {
+    margin-top: 34px;
+    color: #ffffff;
+    white-space: nowrap;
+    position: absolute;
+    top: 3%;
+    left: 22%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    transition: 0.3s;
+    text-shadow: 1px 1px 0 grey, 1px 2px 0 grey, 1px 3px 0 grey, 1px 4px 0 grey,
+    1px 5px 0 grey, 1px 6px 0 grey,
+      5px 13px 15px black
+      ;
+  }
+h2{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #00008B;
+  margin-top: 20px;
+  color: antiquewhite;
+  text-align: center;
+  padding: 10px;
+}
+.body{
+  background-image: url("/Images/car-servicing-limerick.jpg"); 
+}
+.body{
+  background-image: url('/car-servicing-limerick.jpg');
+}
+  

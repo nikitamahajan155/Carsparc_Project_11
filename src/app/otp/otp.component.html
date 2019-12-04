@@ -1,0 +1,29 @@
+<div class="jumbotron image">
+<div class="container">
+    <form>
+        <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="card image">
+            <h1 style="text-align: center;"><b>One Time Password</b></h1>
+            <h3 style="text-align: center; color: wheat;">00:00</h3>
+            <div class="form-group">
+                <input type="text" [ngModel]="codeGenerated" name="Enter OTP" placeholder="Enter OTP" class="form-control">
+            </div>
+            <div class="otp_page">
+                <a href="otp"><u><b>Resend OTP</b></u></a>
+            </div>
+            <div class="btn-group">
+            <div class="form-group" style="text-align: center;">
+                <button type="submit" class="btn btn-primary btn-large" style="margin-left: 70px;" [routerLink]="['']">Sign-Up</button>
+                <button type="reset" class="bth btn-danger btn-large" style="margin-left: 50px;">Cancel</button>
+            </div>
+        </div>
+        </div>
+    </div>
+        <div class="col-md-3"></div>
+    </div>
+    </form>
+</div>
+</div>
+<router-outlet></router-outlet>
